@@ -40,7 +40,7 @@ class Wizard extends Component{
     }
 
     render(){
-        console.log(this.state.name);
+        // console.log(this.state.name);
     return(
 
         <div>

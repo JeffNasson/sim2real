@@ -3,6 +3,7 @@ import House from '../House/House';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+
 class Dashboard extends Component{
     constructor(){
         super();
@@ -23,20 +24,19 @@ class Dashboard extends Component{
     render(){
         let houses = this.state.houses.map((item,i)=>{
            return (
-               <div className='item' key={i}>
-                    <p>{item}</p>
-               </div>
+               <House key={i} />
+                
+            
            )     
         })
         return(
             <div>
                 <Link to ='/wizard'><button>Add New Property</button></Link>
                Dashboard 
-               <House />
                {houses}
             </div>
         )
     }
 }
 
-export default Dashboard
+export default Dashboard;
